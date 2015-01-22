@@ -13,12 +13,12 @@ Newsletter widget Add on widget area at admin panel.
 You can See List of the subcribe use and edit on .you can also change status of the user. manage email, add ,update and delete by manual from admin panel site.
 This plugin provides an easy to use and send bulk email to user for site updation news.
 
-1.)Add On Widget Area
-2.)Setting widget area
-3.)compose email body
-4.)List Of Subscribe user
-5.)Sent mail to Subscribe user
-6.)setup unsubscribe 
+1. Add On Widget Area
+2. Setting widget area
+3. compose email body
+4. List Of Subscribe user
+5. Sent mail to Subscribe user
+6. setup unsubscribe 
 
 
 == Installation ==
@@ -30,9 +30,10 @@ Step 1.
 
 step 2.
 
-1.Plugins => Add New
-2.Upload => Browse Your File And Install 
-3. Activate Plugin and use it. 
+1. Plugins => Add New  .
+2. Upload => Browse Your File And Install .
+3. Activate Plugin and use it.
+
 
 == Screenshots ==
 
