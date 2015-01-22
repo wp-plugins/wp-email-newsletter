@@ -1,0 +1,32 @@
+.wmail_caption 
+{
+	padding-bottom:5px;
+	padding-top:5px;
+	/*padding-left:10px;*/
+	padding-right:5px;
+}
+.wmail_msg 
+{
+	padding-top:5px;
+	padding-bottom:5px;
+	/*padding-left:10px;*/
+	color:#F00;
+}
+.wmail_textbox 
+{
+	padding-bottom:10px;
+	/*padding-left:10px;*/
+}
+.wmail_button 
+{
+	padding-bottom:10px;
+	/*padding-left:10px;*/
+}
+.wmail_textbox_class 
+{
+	width:200px;
+}
+.wmail_textbox_button 
+{
+	width:100px;
+}
