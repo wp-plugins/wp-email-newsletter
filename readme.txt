@@ -1,5 +1,5 @@
 === Wordpress Email Newsletter ===
-Contributors: Bhanderi Tushal
+Contributors: Tushal304
 Tags: Wordpress EMail Newsletter,Wordpress,Email,Newsletter , Manage email subscribe,sent mail.
 Requires at least: 3.5
 Tested up to: 4.0
