@@ -21,8 +21,13 @@
 
           </p></td>
       </tr>
+	   <tr>
+			<td width="33%"><h3><?php _e( 'Frequently Asked Questions', 'wcp-plugin' ); ?></h3></td>
+	   </tr>
+	 
       <tr>
 			<td width="33%"><h3><?php _e( 'PayPal Donation', 'wcp-plugin' ); ?></h3></td>
+			<td width="33%"><h3><?php _e( 'Reviews', 'wcp-plugin' ); ?></h3></td>
 			</tr>
 			<tr>
 			<td valign="top" width="33%" style="text-align: center;">
@@ -43,6 +48,19 @@
 
 				</p>
 			</td>
+			<td valign="top" width="33%" style="text-align: center;">
+				<p><b><?php _e( 'Please Give Review For <br />This Plugins:', 'wcp-plugin'); ?></b></p>
+				
+				<a href="https://wordpress.org/support/view/plugin-reviews/wp-email-newsletter"><button class="reviews">Review</button></a>
+			</td>
+			</tr>
+			<tr>
+			
+			</tr>
+			<tr>
+			
+			</tr>
+			
     </table>
         
       </div>

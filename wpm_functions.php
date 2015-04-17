@@ -3,7 +3,7 @@
  *	Plugin Name: Wordpress Email Newsletter
  *	Plugin URI: http://about.me/tushalbhanderi
  *	Description: Wordpress Simpale Email Newsletter For User Signup On website.admin simple manage subscribe use and send mail for site update
- *	Version: 1.0.0
+ *	Version: 1.0.1
  *	Author:  Bhanderi Tushal
  *	Author URI: http://about.me/tushalbhanderi
  *	License: GPLv2 or later
@@ -21,7 +21,6 @@ function mail_plugin_url( $path = '' ) {
 }
 add_action('admin_print_scripts', 'wmail_do_jslibs' );
 add_action('admin_print_styles', 'wmail_do_css' );
-
 function wmail_do_css()
 {
     wp_enqueue_style('thickbox');
@@ -62,7 +61,6 @@ if (!session_id()) { session_start(); }
 function wmail_mail_activation() 
 {
     global $wpdb, $wp_version;
-    echo "<script>alert(Plugin activated)</script>";
     $admin_email = get_option('admin_email');
     add_option('wmail_title', "Email Newsletter");
     add_option('wmail_bcc', "0");
@@ -106,7 +104,6 @@ function wmail_mail_activation()
                     . "', `wmail_date` = CURDATE()";
                     
         $wpdb->get_results($sql);
-        
         $Sample = '<strong style="color: #990000"> Email newsletter</strong><p>Email newsletter plugin have option to send HTML Mails/Newsletters to registered user,'; 
         $Sample .= ' Comment author, Subscriber and Users who contacted you. Sending email is much cheaper than most other forms of communication. Email marketing has proven very';
         $Sample .= ' successful for those who do it right. This plugin is very useful those who need to send Newsletters to users who subscribed to your blogs.</p>';
@@ -116,8 +113,6 @@ function wmail_mail_activation()
         $Sample .= ' <li>Option to setup email subscription box and option to send email newsletter to subscriber.</li>';
         $Sample .= ' <li>Automatic welcome email to new subscriber.</li><li>Admin email notification for every new subscriber.</li>';
         $Sample .= ' </ol><strong style="color: #990000"></strong><br>.';
-
-        
         $sql = "insert into ".WN_mail_TABLE.""
                     . " set `wmail_subject` = '" . 'Sample HTML Mail'
                     . "', `wmail_content` = '" . $Sample
@@ -126,7 +121,6 @@ function wmail_mail_activation()
                    
         $wpdb->get_results($sql);
     }
-    
     if(strtoupper($wpdb->get_var("show tables like '". WN_mail_TABLE_SUB . "'")) != strtoupper(WN_mail_TABLE_SUB))  
     {
         $wpdb->query("
@@ -138,7 +132,6 @@ function wmail_mail_activation()
                 `wmail_date_sub` DATE NOT NULL )
             ");
     }
-    
     $unsubscribelink = mail_plugin_url."/unsubscribe/unsubscribe.php?rand=##rand##&reff=##reff##&user=##user##";
 	
     add_option('wmail_un_option', "Yes");
@@ -306,7 +299,6 @@ function wmail_send_mail($recipients = array(), $wmail_id = 0, $source = "")
     $headers .= "Return-Path: <" . $sender_email . ">\n";
     $headers .= "Reply-To: \"" . $sender_name . "\" <" . $sender_email . ">\n";
     $headers .= "X-Mailer: PHP" . phpversion() . "\n";
-    
     // Load email subject and email newsletter details.
     $arrEmails = wmail_get_emails($wmail_id);
     if(count($arrEmails) > 0)
@@ -315,16 +307,13 @@ function wmail_send_mail($recipients = array(), $wmail_id = 0, $source = "")
             'wmail_subject' => $arrEmails[0]['wmail_subject'],
             'wmail_content' => $arrEmails[0]['wmail_content']
         );
-        
         $subject = $form['wmail_subject'];
         $message = $form['wmail_content'];
     }
-    
     if($subject == "")
     {
         return false;
     }
-    
     // Check unsubscribe option
     if( strtoupper($wmail_un_option) == "YES" )
     {
@@ -347,9 +336,7 @@ function wmail_send_mail($recipients = array(), $wmail_id = 0, $source = "")
         $message = preg_replace('|&amp;|', '&', $message);
         $mailtext = wordwrap(strip_tags($message), 80, "\n");
     }
-    
     $mailtext = str_replace("\r\n", "<br />", $mailtext);
-    
     if(count($recipients) > 0)
     {
         $emailaddress = "";
@@ -423,7 +410,6 @@ function wmail_send_mail($recipients = array(), $wmail_id = 0, $source = "")
             }
         }
     }
-
     if($num_sent > 0) 
     { 
         _e('<div class="updated fade"><strong><p>Email has been sent successfully.</p></strong></div>', 'wp_mail');
@@ -443,11 +429,9 @@ function wmail_send_mail($recipients = array(), $wmail_id = 0, $source = "")
             $wmail_value = $wmail_value . $value . ", ";
 
             $j = $j + 1;
-        }
-?>
-	<div class="error fade"><p><strong><?php _e('Some invalid email address found.', 'wp_mail'); ?></strong><br /><?php echo $wmail_value; ?></p></div>
-<?php
-    }
+        }?>
+	<div class="error fade"><p><strong><?php _e('Some invalid email address found.', 'wp_mail');?></strong><br /><?php echo $wmail_value;?></p></div>
+<?php }
     return $num_sent;
 }
 function wmail_get_emails( $wmail_id ) 
@@ -516,6 +500,4 @@ function wmail_add_unsubscribe_option()
 {
     global $wpdb;
     include('pages/unsubscribe-setting.php');
-}
-
-?>
+}?>
