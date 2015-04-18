@@ -23,13 +23,13 @@ This plugin provides an easy to use and send bulk email to user for site updatio
 
 == Frequently Asked Questions ==
 
-Q: How can I display Email widget on my website?
+=Q: How can I display Email widget on my website?=
 A: Add Email newsletter widget on your widget area.(Appearance >> Widgets).add on widget where you want to display.
 
-Q: How can I view subscribe list?
+=Q: How can I view subscribe list?=
 A: On admin panel has View Subscriber tab,on there you can view all subscriber list and also change that user status and also9 you can remove from there.
 
-Q: How can i send email to subscriber user ?
+=Q: How can i send email to subscriber user ?=
 A: You can send mail from Send mail to subscribed tab.on here you can send mail to All user OR selected user.
 
 == Installation ==
