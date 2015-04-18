@@ -14,16 +14,31 @@
         
       </tr>
       <tr>
-        <td valign="top" width="33%"><p>
-            <?php _e( '<b>This Plugin Created For Email Newslatter for website. User Subcrribe for newslatterwith His/Her Register Email Address and admin send email when New Updation arriving .And also Informe about website Activity.
-			<br /></b>	 ', 'wcp-plugin'); ?>
+        <td valign="top">
+	   <p>            <?php _e( '<b>This Plugin Created For Email Newslatter for website. User Subscribe for newsletterwith His/Her Register Email Address and admin send email when New Updation arriving .And also Informe about website Activity.<br/></b>', 'wcp-plugin'); ?>
 
 
           </p></td>
       </tr>
-	   <tr>
-			<td width="33%"><h3><?php _e( 'Frequently Asked Questions', 'wcp-plugin' ); ?></h3></td>
+	   <tr class="faq">
+			<td class="faqs" colspan="2"><h3><?php _e( 'Frequently Asked Questions', 'wcp-plugin' ); ?></h3></td>
 	   </tr>
+	    <tr>
+        <td valign="top"><p>
+<p><b> Q: How can I display Email widget on my website?</b><br>
+
+A: Add Email newsletter widget on <a href="<?php echo get_admin_url(); ?>widgets.php">your widget </a> area.(Appearance >> Widgets).add on widget where you want to display.</p>
+
+<p><b>Q: How can I view subscribe list?</b>
+<br>
+A: On admin panel has <a href=" <?php echo get_admin_url(); ?>admin.php?page=view-subscriber">View Subscriber </a>tab,on there you can view all subscriber list and also change that user status and also9 you can remove from there.</p>
+<p><b>Q: How can i send email to subscriber user ?</b>
+<br>
+A: You can send mail from Send <a href="<?php echo get_admin_url(); ?>admin.php?page=sendmail-subscriber"> mail to subscribed </a> tab.on here you can send mail to All user OR selected user.</p>
+
+
+          </p></td>
+      </tr>
 	 
       <tr>
 			<td width="33%"><h3><?php _e( 'PayPal Donation', 'wcp-plugin' ); ?></h3></td>
