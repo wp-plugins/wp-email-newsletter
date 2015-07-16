@@ -3,7 +3,7 @@ Contributors: tushal304
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N9U6APJY23C6N
 Tags: Wordpress Email Newsletter , Newsletter, SendMail, Contact, plugin, widgets,Wordpress,Email,Newsletter , Manage email subscribe,sent mail,user subscribe,send mail to user,custom email template,manage email template,manage user,send mail to selected.
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.2
 License: GPLv2
 
 WordPress Simple Email Newsletter For User Sign-up On website.Create mail and send to subscribes user.send bulk email from WordPress admin panel.
@@ -59,6 +59,4 @@ step 2.
 * First beta release
 
 Now you can easily start Sending Email To Subscribe user.
-
-r.
 
